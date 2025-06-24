@@ -130,7 +130,7 @@ const About = () => {
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-20">
-          <div className="mb-6 p-4 bg-gray-900 rounded-lg inline-block">
+          <div className="mb-6 p-4 rounded-lg inline-block">
             <span className="text-[#D6B978] font-[family-name:var(--font-aboreto)] text-sm font-medium tracking-wider uppercase">
               About the Photographer
             </span>
@@ -155,7 +155,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
           <div ref={textRef} className="space-y-6">
-            <div className="space-y-6 text-gray-300 font-[family-name:var(--font-jost)] leading-relaxed">
+            <div className="space-y-6 text-black font-[family-name:var(--font-jost)] leading-relaxed">
               <p>
                 With over 17 years of experience in professional photography, I
                 specialize in capturing authentic moments that tell compelling

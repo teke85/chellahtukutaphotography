@@ -8,10 +8,9 @@ import {
   Jost,
   Cormorant_Garamond,
 } from "next/font/google";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 import "./globals.css";
-
-import { ThemeProvider } from "@/components/ThemeProvider";
 
 const aboreto = Aboreto({
   subsets: ["latin"],
@@ -89,7 +88,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* <Navigation /> */}
           {children}
         </ThemeProvider>
       </body>
