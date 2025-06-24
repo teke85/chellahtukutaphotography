@@ -12,7 +12,6 @@ import {
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/ThemeProvider";
-// import Navigation from "@/components/Navigation";
 
 const aboreto = Aboreto({
   subsets: ["latin"],
@@ -64,13 +63,13 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "ChellaTukuta  - ChellahTukutaPhotography",
+  title: "ChellaTukuta  - ChellahTukuta Photography Studio",
   description: "We.",
   openGraph: {
     type: "website",
     locale: "en_ZM",
-    url: "https://tekmucreations.website/",
-    siteName: "Tekmu Creations",
+    url: "",
+    siteName: "ChellahTukututa Studio",
   },
 };
 

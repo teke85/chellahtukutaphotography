@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 import { gsap } from "gsap";
 // import OverlayMenu from "./OverlayMenu1";
 import OverlayMenu2 from "./OverlayMenuUpdated";
-import Logo from "./Logo";
 
 // Custom modern menu icon for photography
 const ModernMenuIcon = ({ className }: { className?: string }) => (
@@ -87,10 +86,10 @@ const Navbar = ({ isDarkMode = false }: NavbarProps) => {
         className={cn(
           "fixed top-0 left-0 w-full z-40 shadow-sm transform -translate-y-full transition-all duration-500 h-16 md:h-20",
           scrolled
-            ? "bg-black/90 backdrop-blur-md py-2" // Dark background with blur on scroll
+            ? "bg-black/90 backdrop-blur-md py-2"
             : isDarkMode
-            ? "bg-black/50 backdrop-blur-sm py-4" // Semi-transparent dark background when in dark mode
-            : "bg-transparent py-4" // Default transparent background
+            ? "bg-black/50 backdrop-blur-sm py-4"
+            : "bg-transparent py-4"
         )}
       >
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center h-full">
@@ -99,20 +98,18 @@ const Navbar = ({ isDarkMode = false }: NavbarProps) => {
             className="mb-4 md:mb-0 flex items-center relative group"
           >
             {scrolled ? (
-              // Logo/icon when scrolled
               <div className="flex items-center space-x-3">
                 <Camera className="h-8 w-8 text-amber-500 group-hover:text-amber-400 transition-colors duration-300" />
                 <div className="flex flex-col">
-                  <span className="text-white font-serif text-lg font-bold tracking-wider leading-none">
+                  <span className="text-white font-[family-name:var(--font-cormorant)] text-lg font-bold tracking-wider leading-none">
                     CHELLAH
                   </span>
-                  <span className="text-amber-500 text-xs font-light tracking-[0.2em] leading-none">
+                  <span className="text-amber-500 font-[family-name:var(--font-jost)] text-xs font-light tracking-[0.2em] leading-none">
                     PHOTOGRAPHY
                   </span>
                 </div>
               </div>
             ) : (
-              // Full text version when not scrolled
               <div className="flex items-center space-x-3">
                 <Camera className="h-10 w-10 text-amber-500 group-hover:text-amber-400 transition-colors duration-300" />
                 <span
@@ -121,9 +118,11 @@ const Navbar = ({ isDarkMode = false }: NavbarProps) => {
                     isDarkMode && !scrolled ? "text-white" : "text-white"
                   )}
                 >
-                  <span className="leading-none tracking-wider">CHELLAH</span>
-                  <span className="text-amber-500 text-sm md:text-base font-light tracking-[0.3em] leading-none">
-                    PHOTOGRAPHY
+                  <span className="leading-none font-[family-name:var(--font-cormorant)] text-md tracking-wider">
+                    CHELLAH TUKUTA
+                  </span>
+                  <span className="text-amber-500 text-sm md:text-base font-[family-name:var(--font-jost)] font-light tracking-[0.3em] leading-none">
+                    STUDIO
                   </span>
                 </span>
               </div>
@@ -132,7 +131,6 @@ const Navbar = ({ isDarkMode = false }: NavbarProps) => {
 
           <div className="flex items-center">
             <>
-              {/* OverlayMenu2 should be outside the button */}
               <OverlayMenu2
                 isOpen={isMenuOpen}
                 onClose={() => setIsMenuOpen(false)}
