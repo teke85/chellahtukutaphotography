@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 import { gsap } from "gsap";
 // import OverlayMenu from "./OverlayMenu1";
 import OverlayMenu2 from "./OverlayMenuUpdated";
-import Logo from "./Logo";
 
 // Custom modern menu icon for photography
 const ModernMenuIcon = ({ className }: { className?: string }) => (
