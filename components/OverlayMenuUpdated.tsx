@@ -3,22 +3,31 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
-import { X, Phone, Mail, Instagram, Facebook, Twitter } from "lucide-react";
+import {
+  X,
+  Phone,
+  Mail,
+  Instagram,
+  Facebook,
+  Camera,
+  MapPin,
+} from "lucide-react";
 
 const menuLinks = [
   { path: "/", label: "Home" },
+  { path: "/portfolio", label: "Portfolio" },
   { path: "/about", label: "About" },
-  { path: "/accomodations", label: "Accommodations" },
-  { path: "/conferences", label: "Conferences" },
+  { path: "/services", label: "Services" },
   { path: "/gallery", label: "Gallery" },
   { path: "/contact", label: "Contact" },
 ];
 
-const informationLinks = [
-  { path: "/rates", label: "Rates & Offers" },
-  { path: "/services", label: "Resort Services" },
-  { path: "/booking", label: "Book Your Stay" },
-  { path: "/gallery", label: "Photo Gallery" },
+const portfolioLinks = [
+  { path: "/weddings", label: "Wedding Photography" },
+  { path: "/portraits", label: "Portrait Sessions" },
+  { path: "/events", label: "Event Photography" },
+  { path: "/commercial", label: "Commercial Work" },
+  { path: "/lifestyle", label: "Lifestyle & Fashion" },
 ];
 
 type OverlayMenuProps = {
@@ -26,7 +35,7 @@ type OverlayMenuProps = {
   onClose: () => void;
 };
 
-const OverlayMenu2 = ({ isOpen, onClose }: OverlayMenuProps) => {
+const PhotographyOverlayMenu = ({ isOpen, onClose }: OverlayMenuProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<gsap.core.Timeline | undefined>(undefined);
 
@@ -91,7 +100,7 @@ const OverlayMenu2 = ({ isOpen, onClose }: OverlayMenuProps) => {
   return (
     <div
       ref={containerRef}
-      className={`fixed inset-0 z-50 flex h-screen w-full bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900 overflow-hidden`}
+      className={`fixed inset-0 z-50 flex h-screen w-full bg-gradient-to-br from-gray-900 via-black to-gray-800 overflow-hidden`}
       style={{
         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
       }}
@@ -123,7 +132,7 @@ const OverlayMenu2 = ({ isOpen, onClose }: OverlayMenuProps) => {
                   <div className="menu-link-item-holder flex opacity-0 relative">
                     <Link
                       href={link.path}
-                      className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-[family-name:var(--font-playfair)] text-white hover:text-[#B5860C] transition-colors duration-300 border-b-2 border-transparent hover:border-[#B5860C] pb-1 sm:pb-2 leading-tight"
+                      className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-[family-name:var(--font-playfair)] text-white hover:text-[#D6B978] transition-colors duration-300 border-b-2 border-transparent hover:border-[#D6B978] pb-1 sm:pb-2 leading-tight"
                       onClick={onClose}
                     >
                       {link.label}
@@ -133,87 +142,124 @@ const OverlayMenu2 = ({ isOpen, onClose }: OverlayMenuProps) => {
               ))}
             </div>
 
-            {/* Column 2 - Information Links */}
+            {/* Column 2 - Portfolio Categories */}
             <div className="flex flex-col gap-4 sm:gap-6">
-              <h3 className="opacity-0 menu-link-item-holder font-[family-name:var(--font-playfair)] text-xl sm:text-2xl lg:text-3xl text-white font-semibold">
-                Information
+              <h3 className="opacity-0 menu-link-item-holder font-[family-name:var(--font-playfair)] text-xl sm:text-2xl lg:text-3xl text-white font-semibold flex items-center gap-3">
+                <Camera size={24} className="text-[#D6B978]" />
+                Portfolio
               </h3>
-              {informationLinks.map((link, index) => (
+              {portfolioLinks.map((link, index) => (
                 <div className="opacity-0 menu-link-item-holder" key={index}>
                   <Link
                     href={link.path}
-                    className="font-[family-name:var(--font-jost)] text-base sm:text-lg lg:text-xl text-white/90 hover:text-[#B5860C] transition-colors duration-300 leading-relaxed"
+                    className="font-[family-name:var(--font-jost)] text-base sm:text-lg lg:text-xl text-white/90 hover:text-[#D6B978] leading-relaxed pl-2 border-l-2 border-transparent hover:border-[#D6B978] hover:pl-4 transition-all duration-300"
                     onClick={onClose}
                   >
                     {link.label}
                   </Link>
                 </div>
               ))}
+
+              {/* Featured Work */}
+              <div className="opacity-0 menu-link-item-holder mt-4">
+                <Link
+                  href="/featured"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#D6B978] text-black font-[family-name:var(--font-jost)] font-semibold hover:bg-[#af9762] transition-all duration-300 text-sm"
+                  onClick={onClose}
+                >
+                  <Camera size={16} />
+                  Featured Work
+                </Link>
+              </div>
             </div>
 
-            {/* Column 3 - Contact & Socials */}
+            {/* Column 3 - Contact & Info */}
             <div className="flex flex-col opacity-0 menu-link-item-holder gap-4 sm:gap-6">
               <h4 className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl lg:text-3xl text-white font-semibold">
-                Contact
+                Let&#39;s Connect
               </h4>
 
+              {/* Contact Info */}
               <div className="flex flex-col gap-3 text-white/90">
                 <div className="flex items-center gap-3">
                   <Phone
                     size={16}
-                    className="text-[#B5860C] sm:w-[18px] sm:h-[18px]"
+                    className="text-[#D6B978] sm:w-[18px] sm:h-[18px]"
                   />
-                  <p className="font-[family-name:var(--font-jost)] text-sm sm:text-2xl lg:text-base">
-                    +260972852498 / +260763587299
+                  <p className="font-[family-name:var(--font-jost)] text-sm sm:text-base lg:text-lg">
+                    +260 977 4731992
                   </p>
                 </div>
 
                 <div className="flex items-center gap-3">
                   <Mail
                     size={16}
-                    className="text-[#B5860C] sm:w-[18px] sm:h-[18px]"
+                    className="text-[#D6B978] sm:w-[18px] sm:h-[18px]"
                   />
                   <p className="font-[family-name:var(--font-jost)] text-sm sm:text-base lg:text-lg break-all">
-                    info@sakae-paradise.com
+                    hello@chellahtukuta.com
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <MapPin
+                    size={16}
+                    className="text-[#D6B978] sm:w-[18px] sm:h-[18px]"
+                  />
+                  <p className="font-[family-name:var(--font-jost)] text-sm sm:text-base lg:text-lg">
+                    Lusaka, Zambia
                   </p>
                 </div>
               </div>
 
-              {/* Socials */}
+              {/* Booking CTA */}
+              <div className="mt-4">
+                <Link
+                  href="/booking"
+                  className="inline-block px-6 py-3 bg-gradient-to-r from-[#D6B978] to-[#d8b15c] text-black font-[family-name:var(--font-jost)] font-semibold hover:from-[#D6B978] hover:to-[#dfbc71] transition-all duration-300 text-sm"
+                  onClick={onClose}
+                >
+                  Book a Session
+                </Link>
+              </div>
+
+              {/* Social Links */}
               <div className="flex gap-3 sm:gap-4 mt-2 sm:mt-4">
                 <Link
-                  href="https://www.instagram.com/sakaeparadiseresort/"
-                  className="p-2 sm:p-3 border border-white/30 rounded-full hover:border-[#B5860C] hover:bg-[#B5860C]/10 transition-all duration-300"
+                  href="https://www.instagram.com/chellahtukuta"
+                  className="p-2 sm:p-3 border border-white/30 rounded-full hover:border-[#D6B978] hover:bg-amber-400/10 transition-all duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Instagram
                     size={18}
-                    className="text-white hover:text-[#B5860C] sm:w-5 sm:h-5"
+                    className="text-white hover:text-[#D6B978] sm:w-5 sm:h-5"
                   />
                 </Link>
                 <Link
-                  href="https://web.facebook.com/sakaeparadiseresort"
-                  className="p-2 sm:p-3 border border-white/30 rounded-full hover:border-[#B5860C] hover:bg-[#B5860C]/10 transition-all duration-300"
+                  href="https://web.facebook.com/chellahtukuta"
+                  className="p-2 sm:p-3 border border-white/30 rounded-full hover:border-[#D6B978] hover:bg-amber-400/10 transition-all duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Facebook
                     size={18}
-                    className="text-white hover:text-[#B5860C] sm:w-5 sm:h-5"
+                    className="text-white hover:text-[#D6B978] sm:w-5 sm:h-5"
                   />
                 </Link>
-                <Link
-                  href="https://www.twitter.com/sakae-paradise"
-                  className="p-2 sm:p-3 border border-white/30 rounded-full hover:border-[#B5860C] hover:bg-[#B5860C]/10 transition-all duration-300"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Twitter
-                    size={18}
-                    className="text-white hover:text-[#B5860C] sm:w-5 sm:h-5"
-                  />
-                </Link>
+              </div>
+
+              {/* Photographer Tag */}
+              <div className="mt-6 pt-4 border-t border-white/20">
+                <p className="font-[family-name:var(--font-playfair)] text-lg text-[#D6B978] font-semibold">
+                  Chellah Tukuta
+                </p>
+                <p className="font-[family-name:var(--font-jost)] text-sm text-white/70 mt-1">
+                  Professional Photographer
+                </p>
+                <p className="font-[family-name:var(--font-jost)] text-xs text-white/60 mt-2 italic">
+                  &quot;Capturing life&#39;s beautiful moments&quot;
+                </p>
               </div>
             </div>
           </div>
@@ -223,4 +269,4 @@ const OverlayMenu2 = ({ isOpen, onClose }: OverlayMenuProps) => {
   );
 };
 
-export default OverlayMenu2;
+export default PhotographyOverlayMenu;

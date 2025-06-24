@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Download, Camera } from "lucide-react";
+import { Camera } from "lucide-react";
 import Image from "next/image";
 
 if (typeof window !== "undefined") {
@@ -131,7 +131,7 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="mb-6 p-4 bg-gray-900 rounded-lg inline-block">
-            <span className="text-amber-500 font-[family-name:var(--font-aboreto)] text-sm font-medium tracking-wider uppercase">
+            <span className="text-[#D6B978] font-[family-name:var(--font-aboreto)] text-sm font-medium tracking-wider uppercase">
               About the Photographer
             </span>
           </div>
@@ -141,7 +141,7 @@ const About = () => {
           >
             Chellah Tukuta
           </h2>
-          <div className="w-24 h-px bg-amber-500 mx-auto mb-6"></div>
+          <div className="w-24 h-px bg-[#D6B978] mx-auto mb-6"></div>
           <p
             ref={subheadingRef}
             className="text-lg text-gray-300 font-[family-name:var(--font-jost)] max-w-3xl mx-auto leading-relaxed"
@@ -182,7 +182,7 @@ const About = () => {
             {/* Statistics */}
             <div className="grid grid-cols-3 gap-6 py-8 border-t border-gray-600">
               <div className="text-center">
-                <div className="text-2xl font-[family-name:var(--font-jost)] text-amber-500 font-bold mb-1">
+                <div className="text-2xl font-[family-name:var(--font-jost)] text-[#D6B978] font-bold mb-1">
                   17+
                 </div>
                 <div className="text-sm text-gray-400 font-[family-name:var(--font-jost)]">
@@ -190,7 +190,7 @@ const About = () => {
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-[family-name:var(--font-jost)] text-amber-500 font-bold mb-1">
+                <div className="text-2xl font-[family-name:var(--font-jost)] text-[#D6B978] font-bold mb-1">
                   7
                 </div>
                 <div className="text-sm text-gray-400 font-[family-name:var(--font-jost)]">
@@ -198,7 +198,7 @@ const About = () => {
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-[family-name:var(--font-jost)] text-amber-500 font-bold mb-1">
+                <div className="text-2xl font-[family-name:var(--font-jost)] text-[#D6B978] font-bold mb-1">
                   500+
                 </div>
                 <div className="text-sm text-gray-400 font-[family-name:var(--font-jost)]">
@@ -209,13 +209,13 @@ const About = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="about-button bg-amber-500 text-black px-6 py-3 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-amber-400 transition-colors flex-1 sm:flex-none cursor-pointer font-[family-name:var(--font-jost)]">
+              {/* <button className="about-button bg-[#D6B978] text-black px-6 py-1 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-amber-400 transition-colors flex-1 sm:flex-none cursor-pointer font-[family-name:var(--font-jost)]">
                 <Download size={18} />
                 Download CV
-              </button>
-              <button className="about-button border-2 border-amber-500 text-amber-500 px-6 py-3 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-amber-500 hover:text-black transition-colors flex-1 sm:flex-none cursor-pointer font-[family-name:var(--font-jost)]">
+              </button> */}
+              <button className="about-button border-2 border-[#D6B978] text-[#D6B978] px-6 py-1 font-semibold flex items-center justify-center gap-2 hover:bg-[#D6B978] hover:text-black transition-colors flex-1 sm:flex-none cursor-pointer font-[family-name:var(--font-jost)]">
                 <Camera size={18} />
-                Hire Me
+                Book a Session
               </button>
             </div>
           </div>

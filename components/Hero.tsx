@@ -103,16 +103,12 @@ const Hero = () => {
           animate={{ opacity: animationReady ? 1 : 0 }}
           transition={{ delay: 0.3 }}
           className="hero-subtitle mb-6"
-        >
-          <span className="text-amber-500 text-sm font-[family-name:var(--font-jost)] font-medium tracking-wider uppercase">
-            Photography
-          </span>
-        </motion.div>
+        ></motion.div>
 
         <h1 className="hero-title font-[family-name:var(--font-cormorant)] text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
           {titleWords.map((word, index) => (
             <span key={index} className="inline-block mr-4">
-              <span>{word}</span>
+              <span className="text-white">{word}</span>
             </span>
           ))}
         </h1>
@@ -127,14 +123,14 @@ const Hero = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-amber-500 text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-amber-400 transition-colors"
+            className="bg-[#D6B978] text-black px-8 py-1 rounded-full font-semibold text-lg hover:bg-[#e9c984] transition-colors"
           >
             Let&#39;s Talk
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-black transition-colors"
+            className="border-2 border-white text-white px-8 py-1 rounded-full font-semibold text-lg hover:bg-white hover:text-black transition-colors"
           >
             View Portfolio
           </motion.button>

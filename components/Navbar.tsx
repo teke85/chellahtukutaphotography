@@ -99,29 +99,29 @@ const Navbar = ({ isDarkMode = false }: NavbarProps) => {
           >
             {scrolled ? (
               <div className="flex items-center space-x-3">
-                <Camera className="h-8 w-8 text-amber-500 group-hover:text-amber-400 transition-colors duration-300" />
+                <Camera className="h-8 w-8 text-[#D6B978] group-hover:text-amber-400 transition-colors duration-300" />
                 <div className="flex flex-col">
-                  <span className="text-white font-[family-name:var(--font-cormorant)] text-lg font-bold tracking-wider leading-none">
+                  <span className="text-white font-[family-name:var(--font-cormorant)] text-base font-bold tracking-wider leading-none">
                     CHELLAH
                   </span>
-                  <span className="text-amber-500 font-[family-name:var(--font-jost)] text-xs font-light tracking-[0.2em] leading-none">
+                  <span className="text-[#D6B978] font-[family-name:var(--font-jost)] text-xs font-light tracking-[0.2em] leading-none">
                     PHOTOGRAPHY
                   </span>
                 </div>
               </div>
             ) : (
               <div className="flex items-center space-x-3">
-                <Camera className="h-10 w-10 text-amber-500 group-hover:text-amber-400 transition-colors duration-300" />
+                <Camera className="h-10 w-10 text-[#D6B978] transition-colors duration-300" />
                 <span
                   className={cn(
                     "flex flex-col text-2xl md:text-3xl font-serif font-bold transition-colors duration-500",
                     isDarkMode && !scrolled ? "text-white" : "text-white"
                   )}
                 >
-                  <span className="leading-none font-[family-name:var(--font-cormorant)] text-md tracking-wider">
+                  <span className="leading-none font-[family-name:var(--font-playfair)] text-base tracking-wider">
                     CHELLAH TUKUTA
                   </span>
-                  <span className="text-amber-500 text-sm md:text-base font-[family-name:var(--font-jost)] font-light tracking-[0.3em] leading-none">
+                  <span className="text-[#D6B978] text-sm md:text-base font-[family-name:var(--font-jost)] font-light tracking-[0.3em] leading-none">
                     STUDIO
                   </span>
                 </span>
@@ -141,8 +141,8 @@ const Navbar = ({ isDarkMode = false }: NavbarProps) => {
                 className={cn(
                   "flex items-center cursor-pointer justify-center p-3 rounded-full transition-all duration-300 group",
                   scrolled
-                    ? "bg-amber-500/20 backdrop-blur-sm text-amber-500 hover:text-amber-400 hover:bg-amber-500/30 shadow-lg"
-                    : "bg-amber-500/20 backdrop-blur-sm text-amber-500 hover:text-amber-400 hover:bg-amber-500/30"
+                    ? "bg-amber-500/20 backdrop-blur-sm text-[#D6B978] hover:text-amber-400 hover:bg-amber-500/30 shadow-lg"
+                    : "bg-amber-500/20 backdrop-blur-sm text-[#D6B978] hover:text-amber-400 hover:bg-amber-500/30"
                 )}
                 aria-label="Toggle menu"
               >

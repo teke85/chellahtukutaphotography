@@ -217,7 +217,7 @@ const IntroOverlay = ({ onComplete }: IntroOverlayProps) => {
       {/* Loading Bar */}
       <div ref={loadingBarRef} className="opacity-0 w-64 mb-4">
         <div className="w-full bg-gray-700 rounded-full h-1 overflow-hidden">
-          <div className="loading-fill h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full w-0 transition-all duration-300"></div>
+          <div className="loading-fill h-full bg-gradient-to-r from-[#D6B978] to-[#ecc46d] rounded-full w-0 transition-all duration-300"></div>
         </div>
       </div>
 
