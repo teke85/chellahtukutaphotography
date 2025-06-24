@@ -131,20 +131,20 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="mb-6 p-4 rounded-lg inline-block">
-            <span className="text-[#D6B978] font-[family-name:var(--font-aboreto)] text-sm font-medium tracking-wider uppercase">
+            <span className="text-black dark:text-white font-[family-name:var(--font-jost)] text-sm font-medium tracking-wider uppercase">
               About the Photographer
             </span>
           </div>
           <h2
             ref={headingRef}
-            className="text-4xl md:text-5xl font-[family-name:var(--font-jost)] font-bold text-white mb-6"
+            className="text-4xl md:text-5xl font-[family-name:var(--font-jost)] font-bold text-black dark:text-white mb-6"
           >
             Chellah Tukuta
           </h2>
           <div className="w-24 h-px bg-[#D6B978] mx-auto mb-6"></div>
           <p
             ref={subheadingRef}
-            className="text-lg text-gray-300 font-[family-name:var(--font-jost)] max-w-3xl mx-auto leading-relaxed"
+            className="text-lg text-black dark:text-white font-[family-name:var(--font-jost)] max-w-3xl mx-auto leading-relaxed"
           >
             Capturing authentic moments through creative vision and technical
             excellence
@@ -155,7 +155,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
           <div ref={textRef} className="space-y-6">
-            <div className="space-y-6 text-black font-[family-name:var(--font-jost)] leading-relaxed">
+            <div className="space-y-6 dark:text-white text-black font-[family-name:var(--font-jost)] leading-relaxed">
               <p>
                 With over 17 years of experience in professional photography, I
                 specialize in capturing authentic moments that tell compelling
@@ -182,18 +182,18 @@ const About = () => {
             {/* Statistics */}
             <div className="grid grid-cols-3 gap-6 py-8 border-t border-gray-600">
               <div className="text-center">
-                <div className="text-2xl font-[family-name:var(--font-jost)] text-[#D6B978] font-bold mb-1">
+                <div className="text-2xl font-[family-name:var(--font-jost)] text-[#D6B978] dark:text-white font-bold mb-1">
                   17+
                 </div>
-                <div className="text-sm text-gray-400 font-[family-name:var(--font-jost)]">
+                <div className="text-sm text-black dark:text-white font-[family-name:var(--font-jost)]">
                   Years Experience
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-[family-name:var(--font-jost)] text-[#D6B978] font-bold mb-1">
+                <div className="text-2xl font-[family-name:var(--font-jost)] text-[#D6B978] dark:text-white font-bold mb-1">
                   7
                 </div>
-                <div className="text-sm text-gray-400 font-[family-name:var(--font-jost)]">
+                <div className="text-sm text-black dark:text-white font-[family-name:var(--font-jost)]">
                   International Awards
                 </div>
               </div>
@@ -201,7 +201,7 @@ const About = () => {
                 <div className="text-2xl font-[family-name:var(--font-jost)] text-[#D6B978] font-bold mb-1">
                   500+
                 </div>
-                <div className="text-sm text-gray-400 font-[family-name:var(--font-jost)]">
+                <div className="text-sm text-black dark:text-white font-[family-name:var(--font-jost)]">
                   Happy Clients
                 </div>
               </div>
