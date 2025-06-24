@@ -137,7 +137,7 @@ const About = () => {
           </div>
           <h2
             ref={headingRef}
-            className="text-4xl md:text-5xl font-[family-name:var(--font-jost)] font-bold text-black dark:text-white mb-6"
+            className="text-4xl md:text-5xl font-[family-name:var(--font-cormorant)] font-bold text-black dark:text-white mb-6"
           >
             Chellah Tukuta
           </h2>
