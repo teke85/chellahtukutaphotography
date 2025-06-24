@@ -139,7 +139,7 @@ const Navbar = ({ isDarkMode = false }: NavbarProps) => {
               <button
                 onClick={toggleMenu}
                 className={cn(
-                  "flex items-center cursor-pointer justify-center p-3 rounded-full transition-all duration-300 group",
+                  "flex items-center cursor-pointer justify-center p-1 rounded-full transition-all duration-300 group",
                   scrolled
                     ? "bg-amber-500/20 backdrop-blur-sm text-[#D6B978] hover:text-amber-400 hover:bg-amber-500/30 shadow-lg"
                     : "bg-amber-500/20 backdrop-blur-sm text-[#D6B978] hover:text-amber-400 hover:bg-amber-500/30"

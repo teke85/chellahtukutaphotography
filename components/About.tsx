@@ -126,7 +126,7 @@ const About = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-4 bg-gray-800">
+    <section ref={sectionRef} className="py-24 px-4">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-20">

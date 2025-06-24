@@ -91,7 +91,7 @@ const Hero = () => {
         <div
           className="w-full h-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://res.cloudinary.com/dpeg7wc34/image/upload/v1750722303/SnapInsta.to_425385148_1061142308332003_4387177139689535753_n_ox2pfz.jpg')`,
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://static.wixstatic.com/media/62b59b_49e9f114599c475da145a3d78451cc5c~mv2.jpg/v1/fill/w_1351,h_580,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/62b59b_49e9f114599c475da145a3d78451cc5c~mv2.jpg')`,
           }}
         />
       </div>
