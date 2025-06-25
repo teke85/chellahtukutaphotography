@@ -17,7 +17,7 @@ const Hero = () => {
     // Delay animation start to prevent flash
     const timer = setTimeout(() => {
       setAnimationReady(true);
-    }, 200);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);

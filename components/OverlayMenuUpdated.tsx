@@ -132,7 +132,7 @@ const PhotographyOverlayMenu = ({ isOpen, onClose }: OverlayMenuProps) => {
                   <div className="menu-link-item-holder flex opacity-0 relative">
                     <Link
                       href={link.path}
-                      className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-[family-name:var(--font-playfair)] text-white hover:text-[#D6B978] transition-colors duration-300 border-b-2 border-transparent hover:border-[#D6B978] pb-1 sm:pb-2 leading-tight"
+                      className="text-2xl sm:text-3xl lg:text-4xl xl:text-4xl font-[family-name:var(--font-playfair)] text-white hover:text-[#D6B978] transition-colors duration-300 border-b-2 border-transparent hover:border-[#D6B978] pb-1 sm:pb-2 leading-tight"
                       onClick={onClose}
                     >
                       {link.label}

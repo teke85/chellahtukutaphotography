@@ -32,42 +32,61 @@ const About = () => {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const section = sectionRef.current;
+    const initAnimations = () => {
+      const section = sectionRef.current;
+      const heading = headingRef.current;
+      const subheading = subheadingRef.current;
+      const text = textRef.current;
+      const image = imageRef.current;
+      const secondaryImage = secondaryImageRef.current;
 
-    if (section) {
+      if (
+        !section ||
+        !heading ||
+        !subheading ||
+        !text ||
+        !image ||
+        !secondaryImage
+      ) {
+        // Retry if elements aren't ready
+        setTimeout(initAnimations, 100);
+        return;
+      }
+
       // Set initial states
-      gsap.set([headingRef.current, subheadingRef.current, textRef.current], {
+      gsap.set([heading, subheading, text], {
         opacity: 0,
         y: 30,
       });
 
-      gsap.set(imageRef.current, {
+      gsap.set(image, {
         opacity: 0,
         scale: 1.1,
       });
 
-      gsap.set(secondaryImageRef.current, {
+      gsap.set(secondaryImage, {
         opacity: 0,
         y: 50,
       });
 
-      // Create timeline
+      // Create timeline with ScrollTrigger
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
           start: "top 80%",
-          toggleActions: "play none none none",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
         },
       });
 
-      tl.to(headingRef.current, {
+      tl.to(heading, {
         opacity: 1,
         y: 0,
         duration: 0.8,
         ease: "power2.out",
       })
         .to(
-          subheadingRef.current,
+          subheading,
           {
             opacity: 1,
             y: 0,
@@ -77,7 +96,7 @@ const About = () => {
           "-=0.6"
         )
         .to(
-          textRef.current,
+          text,
           {
             opacity: 1,
             y: 0,
@@ -87,7 +106,7 @@ const About = () => {
           "-=0.4"
         )
         .to(
-          imageRef.current,
+          image,
           {
             opacity: 1,
             scale: 1,
@@ -97,7 +116,7 @@ const About = () => {
           "-=0.6"
         )
         .to(
-          secondaryImageRef.current,
+          secondaryImage,
           {
             opacity: 1,
             y: 0,
@@ -108,25 +127,67 @@ const About = () => {
         );
 
       // Button hover animations
-      const buttons = gsap.utils.toArray<HTMLButtonElement>(".about-button");
+      const buttons = section.querySelectorAll(".about-button");
       buttons.forEach((button) => {
+        const btn = button as HTMLButtonElement & {
+          _cleanupHover?: () => void;
+        };
         const onEnter = () =>
-          gsap.to(button, { scale: 1.05, duration: 0.3, ease: "power2.out" });
+          gsap.to(btn, { scale: 1.05, duration: 0.3, ease: "power2.out" });
         const onLeave = () =>
-          gsap.to(button, { scale: 1, duration: 0.3, ease: "power2.out" });
+          gsap.to(btn, { scale: 1, duration: 0.3, ease: "power2.out" });
 
-        button.addEventListener("mouseenter", onEnter);
-        button.addEventListener("mouseleave", onLeave);
+        btn.addEventListener("mouseenter", onEnter);
+        btn.addEventListener("mouseleave", onLeave);
+
+        // Store cleanup functions
+        btn._cleanupHover = () => {
+          btn.removeEventListener("mouseenter", onEnter);
+          btn.removeEventListener("mouseleave", onLeave);
+        };
       });
-    }
+
+      // Define a type for buttons with optional _cleanupHover property
+      type ButtonWithCleanup = HTMLButtonElement & {
+        _cleanupHover?: () => void;
+      };
+
+      return () => {
+        // Cleanup hover listeners
+        buttons.forEach((button) => {
+          const btn = button as ButtonWithCleanup;
+          if (btn._cleanupHover) {
+            btn._cleanupHover();
+          }
+        });
+      };
+    };
+
+    // Delay initialization to ensure DOM is ready
+    const timer = setTimeout(initAnimations, 200);
 
     return () => {
+      clearTimeout(timer);
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
+  useEffect(() => {
+    // Refresh ScrollTrigger after component mounts
+    const refreshTimer = setTimeout(() => {
+      if (typeof window !== "undefined" && ScrollTrigger) {
+        ScrollTrigger.refresh();
+      }
+    }, 1000);
+
+    return () => clearTimeout(refreshTimer);
+  }, []);
+
   return (
-    <section ref={sectionRef} className="py-24 px-4">
+    <section
+      ref={sectionRef}
+      className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-300"
+    >
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-20">
@@ -226,7 +287,7 @@ const About = () => {
             <div ref={imageRef} className="relative">
               <div className="aspect-[3/3] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src={IMAGES.main.src}
+                  src={IMAGES.main.src || "/placeholder.svg"}
                   alt={IMAGES.main.alt}
                   fill
                   className="object-cover transition-transform duration-700"
@@ -244,7 +305,7 @@ const About = () => {
             >
               <div className="relative w-full h-full rounded-lg overflow-hidden shadow-xl border-4 border-gray-800">
                 <Image
-                  src={IMAGES.secondary.src}
+                  src={IMAGES.secondary.src || "/placeholder.svg"}
                   alt={IMAGES.secondary.alt}
                   fill
                   className="object-cover"

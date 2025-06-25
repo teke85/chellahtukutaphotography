@@ -59,7 +59,7 @@ const ThemeToggle = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
-        className="bg-black/90 backdrop-blur-md border-amber-500/30 text-white"
+        className="bg-white/90 backdrop-blur-md border-amber-500/30 text-white"
       >
         <DropdownMenuItem
           onClick={() => setTheme("light")}

@@ -117,7 +117,7 @@ const EnhancedServicesSection = () => {
     },
     {
       icon: <PawPrint className="w-8 h-8" />,
-      title: "Animal Photography",
+      title: "Wildlife Photography",
       description:
         "Specialized photography celebrating the beauty and character of animals, from beloved pets to wildlife documentation.",
       features: ["Pet Portraits", "Wildlife Photography", "Equestrian Shoots"],
@@ -179,18 +179,18 @@ const EnhancedServicesSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center font-[family-name:var(--font-jost)] gap-2 bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center font-[family-name:var(--font-jost)] gap-2 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 px-4 py-2 rounded-full text-sm font-medium mb-4 transition-colors duration-300">
             <Star className="w-4 h-4" />
             Professional Photography Services
           </div>
-          <h2 className="text-4xl font-[family-name:var(--font-cormorant)] md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl font-[family-name:var(--font-cormorant)] md:text-5xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">
             Capturing Life&#39;s Moments
           </h2>
-          <p className="text-xl font-[family-name:var(--font-jost)] text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl font-[family-name:var(--font-jost)] text-gray-600 dark:text-gray-300 max-w-3xl mx-auto transition-colors duration-300">
             From corporate events to cultural celebrations, fashion shoots to
             wildlife photography - we specialize in diverse photography services
             with artistic vision and technical excellence.
@@ -204,7 +204,7 @@ const EnhancedServicesSection = () => {
             return (
               <div
                 key={serviceIndex}
-                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
+                className="group bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl dark:shadow-gray-900/50 transition-all duration-500 overflow-hidden border border-gray-100 dark:border-gray-700"
               >
                 {/* Image Carousel and Overlays */}
                 <div className="relative aspect-[4/5] w-full">
@@ -252,14 +252,14 @@ const EnhancedServicesSection = () => {
 
                   {/* Service Info Overlay */}
                   <div className="absolute bottom-4 left-4 flex items-center gap-2 text-white z-10">
-                    <div className="p-2 bg-amber-500 rounded-lg">
+                    <div className="p-2 text-[#D6B978] rounded-lg">
                       {service.icon}
                     </div>
                     <div>
                       <h3 className="text-xl font-bold font-[family-name:var(--font-jost)]">
                         {service.title}
                       </h3>
-                      <p className="text-amber-300 font-[family-name:var(--font-jost)] font-semibold">
+                      <p className="dark:text-gold-50 text-gold-500 font-[family-name:var(--font-jost)] font-semibold">
                         {service.price}
                       </p>
                     </div>
@@ -272,7 +272,7 @@ const EnhancedServicesSection = () => {
                 </div>
                 {/* Content */}
                 <div className="p-6">
-                  <p className="text-gray-600 mb-4 font-[family-name:var(--font-jost)] leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 font-[family-name:var(--font-jost)] leading-relaxed transition-colors duration-300">
                     {service.description}
                   </p>
 
@@ -281,16 +281,16 @@ const EnhancedServicesSection = () => {
                     {service.features.map((feature, idx) => (
                       <li
                         key={idx}
-                        className="flex items-center font-[family-name:var(--font-jost)] gap-2 text-sm text-gray-700"
+                        className="flex items-center font-[family-name:var(--font-jost)] gap-2 text-sm text-gray-700 dark:text-gray-300 transition-colors duration-300"
                       >
-                        <div className="w-1.5 h-1.5 bg-amber-500 rounded-full" />
+                        <div className="w-1.5 h-1.5 bg-[#D6B978] rounded-full" />
                         {feature}
                       </li>
                     ))}
                   </ul>
 
                   {/* CTA Button */}
-                  <button className="group/btn w-full font-[family-name:var(--font-jost)] bg-gray-900 hover:bg-amber-500 text-white py-2 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                  <button className="group/btn w-full font-[family-name:var(--font-jost)] bg-gray-900 dark:bg-gray-700 hover:bg-amber-500 dark:hover:bg-amber-500 text-white py-2 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </button>
@@ -301,16 +301,16 @@ const EnhancedServicesSection = () => {
         </div>
 
         {/* Additional Services */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 mb-16">
+        <div className="bg-white dark:bg-gray-800 dark:text-white rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 mb-16 transition-colors duration-300">
           <div className="text-center mb-8">
-            <div className="inline-flex font-[family-name:var(--font-jost)] items-center gap-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <div className="inline-flex font-[family-name:var(--font-jost)] items-center gap-2 bg-blue-100 dark:bg-blue-900/30 dark:text-[#D6B978] px-4 py-2 rounded-full text-sm font-medium mb-4 transition-colors duration-300">
               <Sparkles className="w-4 h-4" />
               Additional Services
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+            <h3 className="text-2xl font-bold font-[family-name:var(--font-cormorant)] text-gray-900 dark:text-white mb-2 transition-colors duration-300">
               Complete Photography Solutions
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-600 dark:text-gray-300 transition-colors duration-300">
               Professional support services to enhance your photography
               experience
             </p>
@@ -320,32 +320,34 @@ const EnhancedServicesSection = () => {
             {additionalServices.map((service, index) => (
               <div
                 key={index}
-                className="text-center p-4 border border-gray-100 rounded-lg hover:border-amber-300 transition-colors"
+                className="text-center p-4 border font-[family-name:var(--font-jost)] border-gray-100 dark:border-gray-600 rounded-lg hover:border-amber-300 dark:hover:border-amber-500 transition-colors duration-300"
               >
-                <h4 className="font-semibold text-gray-900 mb-2">
+                <h4 className="font-semibold font-[family-name:var(--font-jost)] text-gray-900 dark:text-white mb-2 transition-colors duration-300">
                   {service.title}
                 </h4>
-                <p className="text-sm text-gray-600">{service.description}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300 transition-colors duration-300">
+                  {service.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center font-[family-name:var(--font-jost)] bg-gray-900 rounded-2xl p-8 text-white">
+        <div className="text-center font-[family-name:var(--font-jost)] bg-gray-900 dark:bg-gray-800 rounded-2xl p-8 text-white transition-colors duration-300">
           <h3 className="text-2xl font-bold mb-4">
             Ready to Capture Your Story?
           </h3>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-300 dark:text-gray-400 mb-6 max-w-2xl mx-auto transition-colors duration-300">
             Whether it&#39;s a corporate event, cultural celebration, fashion
             shoot, or wildlife adventure - let&#39;s discuss your photography
             needs and create something extraordinary together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-amber-500 hover:bg-amber-400 text-black px-8 py-3 rounded-lg font-semibold transition-colors">
+            <button className="bg-[#D6B978] hover:bg-[#f5d288] text-black px-8 py-3 rounded-lg font-semibold transition-colors">
               Book Consultation
             </button>
-            <button className="border border-gray-600 hover:border-white text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+            <button className="border border-gray-600 dark:border-gray-500 hover:border-white dark:hover:border-white text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               View Portfolio
             </button>
           </div>
