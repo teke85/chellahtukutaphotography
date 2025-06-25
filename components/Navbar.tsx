@@ -50,7 +50,7 @@ const ThemeToggle = () => {
         <Button
           variant="outline"
           size="icon"
-          className="bg-amber-500/20 backdrop-blur-sm border-amber-500/30 text-[#D6B978] hover:text-amber-400 hover:bg-amber-500/30 hover:border-amber-500/40 transition-all duration-300"
+          className="bg-amber-500/20 backdrop-blur-sm border-amber-500/30 text-[#D6B978] hover:text-[#D6B978] hover:bg-amber-500/30 hover:border-amber-500/40 transition-all duration-300"
         >
           <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
@@ -59,23 +59,23 @@ const ThemeToggle = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
-        className="bg-white/90 backdrop-blur-md border-amber-500/30 text-white"
+        className="bg-white/90 backdrop-blur-md border-amber-500/30 dark:text-white dark:bg-gray-900/90 dark:border-gray-700"
       >
         <DropdownMenuItem
           onClick={() => setTheme("light")}
-          className="hover:bg-amber-500/20 hover:text-amber-400 focus:bg-amber-500/20 focus:text-amber-400"
+          className="hover:bg-[#D6B978]/20 hover:text-[#D6B978] focus:bg-amber-500/20 focus:text-[#D6B978"
         >
           Light
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme("dark")}
-          className="hover:bg-amber-500/20 hover:text-amber-400 focus:bg-amber-500/20 focus:text-amber-400"
+          className="hover:bg-amber-500/20 hover:text-[#D6B978] focus:bg-amber-500/20 focus:text-[#D6B978]"
         >
           Dark
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme("system")}
-          className="hover:bg-amber-500/20 hover:text-amber-400 focus:bg-amber-500/20 focus:text-amber-400"
+          className="hover:bg-amber-500/20 hover:text-[#D6B978] focus:bg-amber-500/20 focus:text-[#D6B978]"
         >
           System
         </DropdownMenuItem>

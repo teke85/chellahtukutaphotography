@@ -230,8 +230,8 @@ const IntroOverlay = ({ onComplete }: IntroOverlayProps) => {
 
       {/* Logo */}
       <div ref={logoRef} className="opacity-0 mb-4">
-        <h1 className="text-white text-center font-serif text-4xl md:text-7xl font-bold tracking-tight">
-          Chellah Photography
+        <h1 className="text-white text-center font-serif text-4xl md:text-4xl font-bold tracking-tight">
+          Chellah Tukuta Photography
         </h1>
       </div>
 

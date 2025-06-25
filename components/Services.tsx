@@ -77,10 +77,9 @@ const EnhancedServicesSection = () => {
       features: ["Fashion Shoots", "Model Portfolios", "Personal Branding"],
       price: "From $250",
       images: [
-        "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&h=600&fit=crop&crop=face",
-        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&h=600&fit=crop&crop=face",
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=600&fit=crop&crop=face",
-        "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=500&h=600&fit=crop&crop=face",
+        "https://res.cloudinary.com/dpeg7wc34/image/upload/v1750722304/SnapInsta.to_311443392_5975749915771196_5503778221320223838_n_to1dhx.jpg",
+        "https://res.cloudinary.com/dpeg7wc34/image/upload/v1750722303/SnapInsta.to_285907710_737519397270643_4960431212809824998_n_xiwxoj.jpg",
+        "https://res.cloudinary.com/dpeg7wc34/image/upload/v1750722303/SnapInsta.to_316791578_130796202911507_7453267918318168576_n_hoeheb.jpg",
       ],
     },
     {
@@ -91,10 +90,9 @@ const EnhancedServicesSection = () => {
       features: ["Red Carpet Events", "VIP Functions", "Media Coverage"],
       price: "From $600",
       images: [
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=500&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=600&fit=crop",
+        "https://res.cloudinary.com/dpeg7wc34/image/upload/v1750722304/SnapInsta.to_341769236_546425297545866_5258305120317630516_n_ojyyyg.jpg",
+        "https://res.cloudinary.com/dpeg7wc34/image/upload/v1750722304/SnapInsta.to_345015299_735206504971420_8134265275675875939_n_kdgick.jpg",
+        "https://res.cloudinary.com/dpeg7wc34/image/upload/v1750722303/SnapInsta.to_487010159_4008573312764486_1539697571912603764_n_vv0rk3.jpg",
       ],
     },
     {
@@ -123,10 +121,10 @@ const EnhancedServicesSection = () => {
       features: ["Pet Portraits", "Wildlife Photography", "Equestrian Shoots"],
       price: "From $200",
       images: [
-        "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=500&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?w=500&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1551717743-49959800b1f6?w=500&h=600&fit=crop",
+        "https://res.cloudinary.com/dpeg7wc34/image/upload/v1750722305/SnapInsta.to_441585930_1419626459434054_665141227031560799_n_slcln5.jpg",
+        "https://res.cloudinary.com/dpeg7wc34/image/upload/v1750722304/SnapInsta.to_441314666_724002313005129_6908586782881624272_n_clydyu.jpg",
+        "https://res.cloudinary.com/dpeg7wc34/image/upload/v1750722304/SnapInsta.to_441302257_404053539168052_8880707608876643787_n_bijnts.jpg",
+        "https://res.cloudinary.com/dpeg7wc34/image/upload/v1750722304/SnapInsta.to_441297707_1427298678146819_3417053177736629819_n_uqi18c.jpg",
       ],
     },
   ];
@@ -335,7 +333,7 @@ const EnhancedServicesSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center font-[family-name:var(--font-jost)] bg-gray-900 dark:bg-gray-800 rounded-2xl p-8 text-white transition-colors duration-300">
-          <h3 className="text-2xl font-bold mb-4">
+          <h3 className="text-2xl font-[family-name:var(--font-cormorant)] font-bold mb-4">
             Ready to Capture Your Story?
           </h3>
           <p className="text-gray-300 dark:text-gray-400 mb-6 max-w-2xl mx-auto transition-colors duration-300">
