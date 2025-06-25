@@ -256,9 +256,9 @@ const Footer = () => {
         {/* Copyright */}
         <div className="footer-item mt-8 pt-8 border-t border-gray-800 text-center">
           <p className="font-[family-name:var(--font-jost)] text-gray-400 flex items-center justify-center gap-2">
-            © 2024 Chellah Tukuta Photography. Made with
-            <Heart className="w-4 h-4 text-[#D6B978]" fill="currentColor" />
-            All rights reserved.
+            © 2025 Chellah Tukuta Photography. Demo made with{" "}
+            <Heart className="w-4 h-4 text-[#D6B978]" fill="currentColor" /> by
+            tekmucreations.website All rights reserved.
           </p>
         </div>
       </div>
