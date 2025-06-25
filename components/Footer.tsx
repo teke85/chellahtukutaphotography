@@ -193,7 +193,7 @@ const Footer = () => {
                   href="tel:+1234567890"
                   className="text-gray-300 hover:text-[#D6B978] transition-colors duration-300"
                 >
-                  +260 977 4731992
+                  +260 77 4731992
                 </a>
               </div>
               <div className="flex items-center space-x-3">
