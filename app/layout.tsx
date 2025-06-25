@@ -11,6 +11,7 @@ import {
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const aboreto = Aboreto({
   subsets: ["latin"],
@@ -90,6 +91,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <Footer />
       </body>
     </html>
   );

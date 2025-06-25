@@ -243,7 +243,7 @@ const About = () => {
             {/* Statistics */}
             <div className="grid grid-cols-3 gap-6 py-8 border-t border-gray-600">
               <div className="text-center">
-                <div className="text-2xl font-[family-name:var(--font-jost)] text-[#D6B978] dark:text-white font-bold mb-1">
+                <div className="text-2xl font-[family-name:var(--font-jost)] text-[#D6B978] dark:text-[#D6B978] font-bold mb-1">
                   17+
                 </div>
                 <div className="text-sm text-black dark:text-white font-[family-name:var(--font-jost)]">
@@ -251,7 +251,7 @@ const About = () => {
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-[family-name:var(--font-jost)] text-[#D6B978] dark:text-white font-bold mb-1">
+                <div className="text-2xl font-[family-name:var(--font-jost)] text-[#D6B978] dark:text-[#D6B978] font-bold mb-1">
                   7
                 </div>
                 <div className="text-sm text-black dark:text-white font-[family-name:var(--font-jost)]">
