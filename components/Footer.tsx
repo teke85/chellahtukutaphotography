@@ -258,7 +258,10 @@ const Footer = () => {
           <p className="font-[family-name:var(--font-jost)] text-gray-400 flex items-center justify-center gap-2">
             © 2025 Chellah Tukuta Photography. Demo made with
             <Heart className="w-4 h-4 text-[#D6B978]" fill="currentColor" /> by
-            tekmucreations.website All rights reserved.
+            <Link href="https://www.tekmucreations.website/">
+              tekmucreations.website
+            </Link>
+            All rights reserved.
           </p>
         </div>
       </div>
