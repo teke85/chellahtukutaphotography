@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
+import Link from "next/link";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(TextPlugin);
@@ -125,14 +126,14 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
             className="bg-[#D6B978] text-black px-8 py-1 rounded-full font-semibold text-lg hover:bg-[#e9c984] transition-colors"
           >
-            Let&#39;s Talk
+            <Link href="/contact">Let's Talk</Link>
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="border-2 border-white text-white px-8 py-1 rounded-full font-semibold text-lg hover:bg-white hover:text-black transition-colors"
           >
-            View Portfolio
+            <Link href="/gallery">View Portfolio</Link>
           </motion.button>
         </div>
       </div>
